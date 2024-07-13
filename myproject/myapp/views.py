@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from datetime import datetime
 
 # Create your views here.
 def home(request):
@@ -7,3 +8,6 @@ def home(request):
 
 def menu(request):
     return HttpResponse("This is the Menu")
+
+def display_date(request):
+    return HttpResponse(datetime.today())
