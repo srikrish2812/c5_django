@@ -7,7 +7,7 @@ def home(request):
     return HttpResponse("Welcome to the Little Lemon restaurant! Hello Customer!")
 
 def menu(request):
-    return HttpResponse("This is the Menu")
+    return HttpResponse("This is the menu")
 
 def display_date(request):
     return HttpResponse(datetime.today())
