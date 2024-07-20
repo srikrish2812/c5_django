@@ -30,8 +30,17 @@ def menu(request):
 def display_date(request):
     return HttpResponse(datetime.today())
 
-def dishes(request, dish):
+def dishes_with_path(request, dish):
     
+    items = {
+        "pasta": "Pasta is an italian dish",
+        "noodles": "Noodles is a chinese dish" 
+    }
+    description = items[dish]
+    return HttpResponse(f"<h2> {dish} </h2>" + description)
+
+def dishes_with_query(request):
+    dish = request.GET['dish']
     items = {
         "pasta": "Pasta is an italian dish",
         "noodles": "Noodles is a chinese dish" 
