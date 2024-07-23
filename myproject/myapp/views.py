@@ -36,8 +36,7 @@ def dishes_with_path(request, dish):
         "pasta": "Pasta is an italian dish",
         "noodles": "Noodles is a chinese dish" 
     }
-    description = items[dish]
-    return HttpResponse(f"<h2> {dish} </h2>" + description)
+    return HttpResponse(f"<h2> {dish} </h2>" + items[dish])
 
 def dishes_with_query(request):
     dish = request.GET['dish']
@@ -45,5 +44,5 @@ def dishes_with_query(request):
         "pasta": "Pasta is an italian dish",
         "noodles": "Noodles is a chinese dish" 
     }
-    description = items[dish]
-    return HttpResponse(f"<h2> {dish} </h2>" + description)
+    
+    return HttpResponse(f"<h2> {dish} </h2>" + items[dish])
