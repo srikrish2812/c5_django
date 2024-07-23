@@ -46,3 +46,6 @@ def dishes_with_query(request):
     }
     
     return HttpResponse(f"<h2> {dish} </h2>" + items[dish])
+
+def regex(request):
+    ...
