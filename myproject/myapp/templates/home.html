@@ -1,8 +1,8 @@
 <p>Hello </p>
 
-<form action="" method="POST">
+<form action="" method="POST" style="background-color: bisque;">
     {% csrf_token %}
-    {{form}}
+    {{form.as_p}}
 
     <input type="submit" value="Submit">
 
