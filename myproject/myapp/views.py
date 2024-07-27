@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
-
+from .forms import InputForm
 # Create your views here.
 def home(request):
     path = request.path
@@ -49,3 +49,10 @@ def dishes_with_query(request):
 
 def regex(request):
     ...
+    
+
+def form_view(request):
+    
+    form = InputForm()
+    context = {"form": form}
+    return render(request, "home.html",context=context)
