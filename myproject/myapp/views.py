@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
-from .forms import InputForm
+from .forms import LogForm
 # Create your views here.
 def home(request):
     path = request.path
@@ -53,6 +53,6 @@ def regex(request):
 
 def form_view(request):
     
-    form = InputForm()
+    form = LogForm()
     context = {"form": form}
     return render(request, "home.html",context=context)
