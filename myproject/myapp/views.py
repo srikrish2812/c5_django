@@ -3,7 +3,7 @@ from typing import Dict
 from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
-from .forms import LogForm
+#from .forms import LogForm
 
 
 # Create your views here.
