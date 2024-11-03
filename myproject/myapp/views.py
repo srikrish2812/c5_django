@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
 #from .forms import LogForm
-
+from .models import Menu
 
 # Create your views here.
 def home(request):
@@ -81,3 +81,9 @@ def form_view(request):
 def about(request):
     about_context = {"about": "Little Lemon is restaurant with good hill-side views"}
     return render(request, "about.html", about_context)
+
+def menu_by_id(request):
+    # assigns all the values in the Menu table or model to new_menu
+    new_menu = Menu.objects.all()
+    new_menu_dict: Dict = {'menu':new_menu}
+    return render(request,'menu_card.html',new_menu_dict)
