@@ -7,4 +7,5 @@ urlpatterns = [
     re_path(r"^menu_item/[0-9]{2}/$", views.regex),
     path('home',views.form_view),
     path('about/', views.about),
+    path('menu/', views.menu),
 ]
