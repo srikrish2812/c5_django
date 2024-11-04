@@ -21,5 +21,11 @@ class Menu(models.Model):
     name = models.CharField(max_length=200)
     price = models.IntegerField()
 
+class Reservation(models.Model):
+    name = models.CharField(max_length=100, blank=True)
+    contact = models.CharField("Phone number",max_length=300)
+    time = models.TimeField()
+    count = models.IntegerField()
+
     def __str__(self):
         return self.name
